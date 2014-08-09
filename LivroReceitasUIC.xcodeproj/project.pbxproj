@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B023F3E2199475D900FCEB17 /* SGProtocols.m in Sources */ = {isa = PBXBuildFile; fileRef = B023F3E1199475D900FCEB17 /* SGProtocols.m */; };
+		B023F3E51994843600FCEB17 /* SGEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B023F3E41994843600FCEB17 /* SGEditViewController.m */; };
 		B040BA1019846A6E00B1DEA5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B040BA0F19846A6E00B1DEA5 /* Foundation.framework */; };
 		B040BA1219846A6E00B1DEA5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B040BA1119846A6E00B1DEA5 /* CoreGraphics.framework */; };
 		B040BA1419846A6E00B1DEA5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B040BA1319846A6E00B1DEA5 /* UIKit.framework */; };
@@ -14,13 +16,21 @@
 		B040BA1C19846A6E00B1DEA5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B040BA1B19846A6E00B1DEA5 /* main.m */; };
 		B040BA2019846A6E00B1DEA5 /* SGAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B040BA1F19846A6E00B1DEA5 /* SGAppDelegate.m */; };
 		B040BA2319846A6E00B1DEA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B040BA2119846A6E00B1DEA5 /* Main.storyboard */; };
-		B040BA2619846A6E00B1DEA5 /* SGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B040BA2519846A6E00B1DEA5 /* SGViewController.m */; };
 		B040BA2819846A6E00B1DEA5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B040BA2719846A6E00B1DEA5 /* Images.xcassets */; };
 		B040BA2F19846A6E00B1DEA5 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B040BA2E19846A6E00B1DEA5 /* XCTest.framework */; };
 		B040BA3019846A6E00B1DEA5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B040BA0F19846A6E00B1DEA5 /* Foundation.framework */; };
 		B040BA3119846A6E00B1DEA5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B040BA1319846A6E00B1DEA5 /* UIKit.framework */; };
 		B040BA3919846A6E00B1DEA5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B040BA3719846A6E00B1DEA5 /* InfoPlist.strings */; };
 		B040BA3B19846A6E00B1DEA5 /* LivroReceitasUICTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B040BA3A19846A6E00B1DEA5 /* LivroReceitasUICTests.m */; };
+		B040BA4719846E1900B1DEA5 /* SGCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B040BA4619846E1900B1DEA5 /* SGCollectionViewController.m */; };
+		B040BA4A1984796700B1DEA5 /* SGReceita.m in Sources */ = {isa = PBXBuildFile; fileRef = B040BA491984796700B1DEA5 /* SGReceita.m */; };
+		B040BA4D198488FA00B1DEA5 /* SGCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B040BA4C198488FA00B1DEA5 /* SGCollectionViewCell.m */; };
+		B040BA5019848EB100B1DEA5 /* SGDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B040BA4F19848EB100B1DEA5 /* SGDetailsViewController.m */; };
+		B070407F1991625900D45103 /* SGAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B070407E1991625900D45103 /* SGAddViewController.m */; };
+		B0B5998A199674EA00D8A89A /* SGAddIngredienteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0B59989199674EA00D8A89A /* SGAddIngredienteViewController.m */; };
+		B0B599911996781800D8A89A /* UIViewController+UIViewController_OrientationFix.m in Sources */ = {isa = PBXBuildFile; fileRef = B0B599901996781800D8A89A /* UIViewController+UIViewController_OrientationFix.m */; };
+		B0B599941996785000D8A89A /* UIImagePickerController+UIImagePickerController_OrientationFix.m in Sources */ = {isa = PBXBuildFile; fileRef = B0B599931996785000D8A89A /* UIImagePickerController+UIImagePickerController_OrientationFix.m */; };
+		B0B5999719969E7400D8A89A /* SGIngredientesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0B5999619969E7400D8A89A /* SGIngredientesTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +44,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B023F3E0199475D900FCEB17 /* SGProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGProtocols.h; sourceTree = "<group>"; };
+		B023F3E1199475D900FCEB17 /* SGProtocols.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGProtocols.m; sourceTree = "<group>"; };
+		B023F3E31994843600FCEB17 /* SGEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGEditViewController.h; sourceTree = "<group>"; };
+		B023F3E41994843600FCEB17 /* SGEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGEditViewController.m; sourceTree = "<group>"; };
 		B040BA0C19846A6E00B1DEA5 /* LivroReceitasUIC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LivroReceitasUIC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B040BA0F19846A6E00B1DEA5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B040BA1119846A6E00B1DEA5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -45,14 +59,30 @@
 		B040BA1E19846A6E00B1DEA5 /* SGAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGAppDelegate.h; sourceTree = "<group>"; };
 		B040BA1F19846A6E00B1DEA5 /* SGAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGAppDelegate.m; sourceTree = "<group>"; };
 		B040BA2219846A6E00B1DEA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		B040BA2419846A6E00B1DEA5 /* SGViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGViewController.h; sourceTree = "<group>"; };
-		B040BA2519846A6E00B1DEA5 /* SGViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGViewController.m; sourceTree = "<group>"; };
 		B040BA2719846A6E00B1DEA5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B040BA2D19846A6E00B1DEA5 /* LivroReceitasUICTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LivroReceitasUICTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B040BA2E19846A6E00B1DEA5 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		B040BA3619846A6E00B1DEA5 /* LivroReceitasUICTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LivroReceitasUICTests-Info.plist"; sourceTree = "<group>"; };
 		B040BA3819846A6E00B1DEA5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B040BA3A19846A6E00B1DEA5 /* LivroReceitasUICTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LivroReceitasUICTests.m; sourceTree = "<group>"; };
+		B040BA4519846E1900B1DEA5 /* SGCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGCollectionViewController.h; sourceTree = "<group>"; };
+		B040BA4619846E1900B1DEA5 /* SGCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGCollectionViewController.m; sourceTree = "<group>"; };
+		B040BA481984796700B1DEA5 /* SGReceita.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGReceita.h; sourceTree = "<group>"; };
+		B040BA491984796700B1DEA5 /* SGReceita.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGReceita.m; sourceTree = "<group>"; };
+		B040BA4B198488FA00B1DEA5 /* SGCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGCollectionViewCell.h; sourceTree = "<group>"; };
+		B040BA4C198488FA00B1DEA5 /* SGCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGCollectionViewCell.m; sourceTree = "<group>"; };
+		B040BA4E19848EB100B1DEA5 /* SGDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGDetailsViewController.h; sourceTree = "<group>"; };
+		B040BA4F19848EB100B1DEA5 /* SGDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGDetailsViewController.m; sourceTree = "<group>"; };
+		B070407D1991625900D45103 /* SGAddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGAddViewController.h; sourceTree = "<group>"; };
+		B070407E1991625900D45103 /* SGAddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGAddViewController.m; sourceTree = "<group>"; };
+		B0B59988199674EA00D8A89A /* SGAddIngredienteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGAddIngredienteViewController.h; sourceTree = "<group>"; };
+		B0B59989199674EA00D8A89A /* SGAddIngredienteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGAddIngredienteViewController.m; sourceTree = "<group>"; };
+		B0B5998F1996781800D8A89A /* UIViewController+UIViewController_OrientationFix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+UIViewController_OrientationFix.h"; path = "../UIViewController+UIViewController_OrientationFix.h"; sourceTree = "<group>"; };
+		B0B599901996781800D8A89A /* UIViewController+UIViewController_OrientationFix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+UIViewController_OrientationFix.m"; path = "../UIViewController+UIViewController_OrientationFix.m"; sourceTree = "<group>"; };
+		B0B599921996785000D8A89A /* UIImagePickerController+UIImagePickerController_OrientationFix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImagePickerController+UIImagePickerController_OrientationFix.h"; sourceTree = "<group>"; };
+		B0B599931996785000D8A89A /* UIImagePickerController+UIImagePickerController_OrientationFix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImagePickerController+UIImagePickerController_OrientationFix.m"; sourceTree = "<group>"; };
+		B0B5999519969E7400D8A89A /* SGIngredientesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGIngredientesTableViewController.h; sourceTree = "<group>"; };
+		B0B5999619969E7400D8A89A /* SGIngredientesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGIngredientesTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,9 +145,8 @@
 				B040BA1E19846A6E00B1DEA5 /* SGAppDelegate.h */,
 				B040BA1F19846A6E00B1DEA5 /* SGAppDelegate.m */,
 				B040BA2119846A6E00B1DEA5 /* Main.storyboard */,
-				B040BA2419846A6E00B1DEA5 /* SGViewController.h */,
-				B040BA2519846A6E00B1DEA5 /* SGViewController.m */,
 				B040BA2719846A6E00B1DEA5 /* Images.xcassets */,
+				B040BA4419846ABB00B1DEA5 /* Classes */,
 				B040BA1619846A6E00B1DEA5 /* Supporting Files */,
 			);
 			path = LivroReceitasUIC;
@@ -150,6 +179,75 @@
 				B040BA3719846A6E00B1DEA5 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B040BA4419846ABB00B1DEA5 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				B070407C1991497800D45103 /* Classes */,
+				B070407B1991496E00D45103 /* Controladores */,
+				B0B5998B1996774300D8A89A /* Categorias */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		B070407B1991496E00D45103 /* Controladores */ = {
+			isa = PBXGroup;
+			children = (
+				B040BA4519846E1900B1DEA5 /* SGCollectionViewController.h */,
+				B040BA4619846E1900B1DEA5 /* SGCollectionViewController.m */,
+				B0B5999819969FDA00D8A89A /* ADD/EDIT/DETAILS */,
+			);
+			name = Controladores;
+			sourceTree = "<group>";
+		};
+		B070407C1991497800D45103 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				B040BA481984796700B1DEA5 /* SGReceita.h */,
+				B040BA491984796700B1DEA5 /* SGReceita.m */,
+				B023F3E0199475D900FCEB17 /* SGProtocols.h */,
+				B023F3E1199475D900FCEB17 /* SGProtocols.m */,
+				B040BA4B198488FA00B1DEA5 /* SGCollectionViewCell.h */,
+				B040BA4C198488FA00B1DEA5 /* SGCollectionViewCell.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		B0B5998B1996774300D8A89A /* Categorias */ = {
+			isa = PBXGroup;
+			children = (
+				B0B5998F1996781800D8A89A /* UIViewController+UIViewController_OrientationFix.h */,
+				B0B599901996781800D8A89A /* UIViewController+UIViewController_OrientationFix.m */,
+				B0B599921996785000D8A89A /* UIImagePickerController+UIImagePickerController_OrientationFix.h */,
+				B0B599931996785000D8A89A /* UIImagePickerController+UIImagePickerController_OrientationFix.m */,
+			);
+			name = Categorias;
+			sourceTree = "<group>";
+		};
+		B0B5999819969FDA00D8A89A /* ADD/EDIT/DETAILS */ = {
+			isa = PBXGroup;
+			children = (
+				B040BA4E19848EB100B1DEA5 /* SGDetailsViewController.h */,
+				B040BA4F19848EB100B1DEA5 /* SGDetailsViewController.m */,
+				B070407D1991625900D45103 /* SGAddViewController.h */,
+				B070407E1991625900D45103 /* SGAddViewController.m */,
+				B023F3E31994843600FCEB17 /* SGEditViewController.h */,
+				B023F3E41994843600FCEB17 /* SGEditViewController.m */,
+				B0B599991996A01000D8A89A /* Ingredientes */,
+			);
+			name = ADD/EDIT/DETAILS;
+			sourceTree = "<group>";
+		};
+		B0B599991996A01000D8A89A /* Ingredientes */ = {
+			isa = PBXGroup;
+			children = (
+				B0B59988199674EA00D8A89A /* SGAddIngredienteViewController.h */,
+				B0B59989199674EA00D8A89A /* SGAddIngredienteViewController.m */,
+				B0B5999519969E7400D8A89A /* SGIngredientesTableViewController.h */,
+				B0B5999619969E7400D8A89A /* SGIngredientesTableViewController.m */,
+			);
+			name = Ingredientes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,6 +298,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = Shinigami;
 				TargetAttributes = {
+					B040BA0B19846A6E00B1DEA5 = {
+						DevelopmentTeam = 8NMTTAYVFF;
+					};
 					B040BA2C19846A6E00B1DEA5 = {
 						TestTargetID = B040BA0B19846A6E00B1DEA5;
 					};
@@ -250,9 +351,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0B5999719969E7400D8A89A /* SGIngredientesTableViewController.m in Sources */,
+				B0B5998A199674EA00D8A89A /* SGAddIngredienteViewController.m in Sources */,
+				B040BA4719846E1900B1DEA5 /* SGCollectionViewController.m in Sources */,
 				B040BA2019846A6E00B1DEA5 /* SGAppDelegate.m in Sources */,
-				B040BA2619846A6E00B1DEA5 /* SGViewController.m in Sources */,
+				B070407F1991625900D45103 /* SGAddViewController.m in Sources */,
+				B0B599941996785000D8A89A /* UIImagePickerController+UIImagePickerController_OrientationFix.m in Sources */,
+				B040BA4A1984796700B1DEA5 /* SGReceita.m in Sources */,
+				B040BA4D198488FA00B1DEA5 /* SGCollectionViewCell.m in Sources */,
 				B040BA1C19846A6E00B1DEA5 /* main.m in Sources */,
+				B023F3E51994843600FCEB17 /* SGEditViewController.m in Sources */,
+				B0B599911996781800D8A89A /* UIViewController+UIViewController_OrientationFix.m in Sources */,
+				B040BA5019848EB100B1DEA5 /* SGDetailsViewController.m in Sources */,
+				B023F3E2199475D900FCEB17 /* SGProtocols.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,6 +490,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LivroReceitasUIC/LivroReceitasUIC-Prefix.pch";
 				INFOPLIST_FILE = "LivroReceitasUIC/LivroReceitasUIC-Info.plist";
@@ -392,6 +504,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LivroReceitasUIC/LivroReceitasUIC-Prefix.pch";
 				INFOPLIST_FILE = "LivroReceitasUIC/LivroReceitasUIC-Info.plist";
@@ -459,6 +572,7 @@
 				B040BA4019846A6E00B1DEA5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B040BA4119846A6E00B1DEA5 /* Build configuration list for PBXNativeTarget "LivroReceitasUICTests" */ = {
 			isa = XCConfigurationList;
@@ -467,6 +581,7 @@
 				B040BA4319846A6E00B1DEA5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
