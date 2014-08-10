@@ -9,9 +9,13 @@
 #import "SGAddViewController.h"
 #import "SGCollectionViewController.h"
 #import "SGAddIngredienteViewController.h"
-#import "SGIngredientesTableViewController.h"
+#import "SGAddProcedimentoViewController.h"
 #import "SGReceita.h"
 #import "SGProtocols.h"
+
+#define FONT_SIZE 14.0f
+#define CELL_CONTENT_WIDTH 320.0f
+#define CELL_CONTENT_MARGIN 10.0f
 
 @interface SGAddViewController ()
 
@@ -31,6 +35,9 @@
 @synthesize AdicionarImagemImage;
 @synthesize ingredientesINS;
 @synthesize procedimentosINS;
+
+@synthesize ingTable;
+@synthesize procTable;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -100,11 +107,18 @@
 }
 
 - (IBAction)adicionarProcedimentoButton:(id)sender {
+    SGAddProcedimentoViewController *adicionarProcedimento = [self.storyboard instantiateViewControllerWithIdentifier:@"adicionarProcedimento"];
     
+    // definir o tipo de janela
+    adicionarProcedimento.modalInPopover = YES;
+    adicionarProcedimento.modalPresentationStyle = UIModalPresentationFormSheet;
+    adicionarProcedimento.delegate = self;
     
-    
+    //mostrar a nova janela
+    [self.navigationController presentViewController:adicionarProcedimento animated:YES completion:nil];
 }
 
+// para adicionar imagem
 - (IBAction)addImage:(id)sender {
     
     UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
@@ -117,6 +131,7 @@
     [self presentViewController:imagePicker animated:YES completion:nil];
 }
 
+// para escolher a imagem a partir do album de fotografias
 -(void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
     
     UIImage *img = info[UIImagePickerControllerEditedImage];
@@ -133,17 +148,117 @@
     [picker dismissViewControllerAnimated:YES completion:nil];
 }
 
--(void) adicionarIngrediente: (NSString *) ingrediente{
-    [self.ingredientesINS addObject:ingrediente];
-    
-    NSLog(@"aqui");
-    NSLog(@"%@", ingredientesINS[0]);
-
-    for (int i = 0; ingredientesINS.count; i++) {
-        NSLog(@"%@", ingredientesINS[i]);
+// para adicionar o ingrediente ao array de ingredientes
+-(void) adicionarIngrediente: (NSString *) ingrediente naPosicao: (NSIndexPath *)indexPath;{
+    if(!ingredientesINS){
+        ingredientesINS = [[NSMutableArray alloc] init];
     }
     
-    SGIngredientesTableViewController *ingTable = [[SGIngredientesTableViewController alloc] init];
-    ingTable.listaDeIngredientes = ingredientesINS;
+    if(!indexPath){
+        [self.ingredientesINS addObject:ingrediente];
+    }else{
+        [self.ingredientesINS replaceObjectAtIndex:indexPath.row withObject:ingrediente];
+    }
+    
+    [ingTable reloadData];
 }
+
+// para adicionar o procedimento ao array de procedimentos
+-(void) adicionarProcedimento: (NSString *) procedimento naPosicao: (NSIndexPath *)indexPath;{
+    if(!procedimentosINS){
+        procedimentosINS = [[NSMutableArray alloc] init];
+    }
+    
+    if(!indexPath){
+        [self.procedimentosINS addObject:procedimento];
+    }else{
+        [self.procedimentosINS replaceObjectAtIndex:indexPath.row withObject:procedimento];
+    }
+    
+    [procTable reloadData];
+}
+
+// o numero de seccoes que a tabela tem
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+// o numero de linhas que a tabela tem
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    if (tableView == self.ingTable) {
+        return [ingredientesINS count];
+    }else{
+        return [procedimentosINS count];
+    }
+}
+
+// para apresentar os valores inseridos nas tabelas (ingredientes e procedimentos)
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (tableView == ingTable){
+        static NSString *identifier = @"ingredientesTableCellADD";
+    
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    
+        if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault  reuseIdentifier:identifier];
+        }
+        
+    
+        NSString *ingrediente = [ingredientesINS objectAtIndex:indexPath.row];
+        cell.textLabel.text = ingrediente;
+        
+        return cell;
+    }else{
+        static NSString *identifier = @"procedimentosTableCellADD";
+        
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+        
+        if (cell == nil) {
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault  reuseIdentifier:identifier];
+        }
+        
+        NSString *procedimento = [procedimentosINS objectAtIndex:indexPath.row];
+        cell.textLabel.text = procedimento;
+        
+        return cell;
+    }
+}
+
+// para editar os valores inseridos nas tabelas (ingredientes e procedimentos)
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (tableView == ingTable){
+        SGAddIngredienteViewController *adicionarIngrediente = [self.storyboard instantiateViewControllerWithIdentifier:@"adicionarIngrediente"];
+        
+        // definir o tipo de janela
+        adicionarIngrediente.modalInPopover = YES;
+        adicionarIngrediente.modalPresentationStyle = UIModalPresentationFormSheet;
+        adicionarIngrediente.delegate = self;
+        
+        adicionarIngrediente.indexPath = indexPath;
+        
+        //mostrar a nova janela
+        [self.navigationController presentViewController:adicionarIngrediente animated:YES completion:nil];
+        
+        // preencher com os valores já definidos no array de ingredientes
+        adicionarIngrediente.nomeField.text = [[[ingredientesINS objectAtIndex:indexPath.row] componentsSeparatedByString:@" de "] objectAtIndex:1];
+        adicionarIngrediente.quantidadeField.text = [[[ingredientesINS objectAtIndex:indexPath.row] componentsSeparatedByString:@" de "] objectAtIndex:0];
+        
+    }else{
+        SGAddProcedimentoViewController *adicionarProcedimento = [self.storyboard instantiateViewControllerWithIdentifier:@"adicionarProcedimento"];
+        
+        // definir o tipo de janela
+        adicionarProcedimento.modalInPopover = YES;
+        adicionarProcedimento.modalPresentationStyle = UIModalPresentationFormSheet;
+        adicionarProcedimento.delegate = self;
+        
+        adicionarProcedimento.indexPath = indexPath;
+        
+        //mostrar a nova janela
+        [self.navigationController presentViewController:adicionarProcedimento animated:YES completion:nil];
+        
+        // preencher com os valores já definidos no array de proceddimentos
+        adicionarProcedimento.procedimentoField.text = [[[procedimentosINS objectAtIndex:indexPath.row] componentsSeparatedByString:@"- "] objectAtIndex:1];
+    }
+}
+
 @end

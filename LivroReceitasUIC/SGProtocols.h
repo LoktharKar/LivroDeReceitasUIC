@@ -19,7 +19,8 @@
 
 @protocol SGProtocolsADD_ING_PROC
 
--(void) adicionarIngrediente: (NSString *) ingrediente;
+-(void) adicionarIngrediente: (NSString *) ingrediente naPosicao: (NSIndexPath *)indexPath;
+-(void) adicionarProcedimento: (NSString *) procedimento naPosicao: (NSIndexPath *)indexPath;;
 
 @end
 

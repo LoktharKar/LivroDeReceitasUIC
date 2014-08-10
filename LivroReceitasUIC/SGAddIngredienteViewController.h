@@ -16,6 +16,9 @@
 - (IBAction)guardarButton:(id)sender;
 - (IBAction)cancelarButton:(id)sender;
 
+@property (nonatomic) NSIndexPath *indexPath;
+@property (strong, nonatomic) IBOutlet UILabel *tituloField;
+
 @property (nonatomic) id delegate;
 
 @end

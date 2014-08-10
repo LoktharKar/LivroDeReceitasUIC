@@ -20,8 +20,6 @@
 @synthesize procedimentos;
 @synthesize favorito;
 
-
-
 @synthesize posicao;
 
 // criacao das key para usar na gravacao dos dados no userdefaults (devia-se usar o CoreData)

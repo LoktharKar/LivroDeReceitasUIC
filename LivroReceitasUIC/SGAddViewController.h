@@ -10,7 +10,7 @@
 #import "SGReceita.h"
 #import "SGCollectionViewController.h"
 
-@interface SGAddViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate, SGProtocolsADD_ING_PROC>
+@interface SGAddViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate, SGProtocolsADD_ING_PROC, UITableViewDelegate, UITableViewDataSource>
 
 @property (strong, nonatomic) IBOutlet UITextField *nomeField;
 @property (strong, nonatomic) IBOutlet UITextField *categoriaField;
@@ -31,5 +31,8 @@
 
 @property (nonatomic) NSMutableArray *ingredientesINS;
 @property (nonatomic) NSMutableArray *procedimentosINS;
+
+@property (strong, nonatomic) IBOutlet UITableView *ingTable;
+@property (strong, nonatomic) IBOutlet UITableView *procTable;
 
 @end

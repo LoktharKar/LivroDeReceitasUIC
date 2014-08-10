@@ -26,11 +26,11 @@
 		B040BA4A1984796700B1DEA5 /* SGReceita.m in Sources */ = {isa = PBXBuildFile; fileRef = B040BA491984796700B1DEA5 /* SGReceita.m */; };
 		B040BA4D198488FA00B1DEA5 /* SGCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B040BA4C198488FA00B1DEA5 /* SGCollectionViewCell.m */; };
 		B040BA5019848EB100B1DEA5 /* SGDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B040BA4F19848EB100B1DEA5 /* SGDetailsViewController.m */; };
+		B05EFABF1997A1EC001006DA /* SGAddProcedimentoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B05EFABE1997A1EC001006DA /* SGAddProcedimentoViewController.m */; };
 		B070407F1991625900D45103 /* SGAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B070407E1991625900D45103 /* SGAddViewController.m */; };
 		B0B5998A199674EA00D8A89A /* SGAddIngredienteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0B59989199674EA00D8A89A /* SGAddIngredienteViewController.m */; };
 		B0B599911996781800D8A89A /* UIViewController+UIViewController_OrientationFix.m in Sources */ = {isa = PBXBuildFile; fileRef = B0B599901996781800D8A89A /* UIViewController+UIViewController_OrientationFix.m */; };
 		B0B599941996785000D8A89A /* UIImagePickerController+UIImagePickerController_OrientationFix.m in Sources */ = {isa = PBXBuildFile; fileRef = B0B599931996785000D8A89A /* UIImagePickerController+UIImagePickerController_OrientationFix.m */; };
-		B0B5999719969E7400D8A89A /* SGIngredientesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0B5999619969E7400D8A89A /* SGIngredientesTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +73,8 @@
 		B040BA4C198488FA00B1DEA5 /* SGCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGCollectionViewCell.m; sourceTree = "<group>"; };
 		B040BA4E19848EB100B1DEA5 /* SGDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGDetailsViewController.h; sourceTree = "<group>"; };
 		B040BA4F19848EB100B1DEA5 /* SGDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGDetailsViewController.m; sourceTree = "<group>"; };
+		B05EFABD1997A1EC001006DA /* SGAddProcedimentoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGAddProcedimentoViewController.h; sourceTree = "<group>"; };
+		B05EFABE1997A1EC001006DA /* SGAddProcedimentoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGAddProcedimentoViewController.m; sourceTree = "<group>"; };
 		B070407D1991625900D45103 /* SGAddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGAddViewController.h; sourceTree = "<group>"; };
 		B070407E1991625900D45103 /* SGAddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGAddViewController.m; sourceTree = "<group>"; };
 		B0B59988199674EA00D8A89A /* SGAddIngredienteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGAddIngredienteViewController.h; sourceTree = "<group>"; };
@@ -81,8 +83,6 @@
 		B0B599901996781800D8A89A /* UIViewController+UIViewController_OrientationFix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+UIViewController_OrientationFix.m"; path = "../UIViewController+UIViewController_OrientationFix.m"; sourceTree = "<group>"; };
 		B0B599921996785000D8A89A /* UIImagePickerController+UIImagePickerController_OrientationFix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImagePickerController+UIImagePickerController_OrientationFix.h"; sourceTree = "<group>"; };
 		B0B599931996785000D8A89A /* UIImagePickerController+UIImagePickerController_OrientationFix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImagePickerController+UIImagePickerController_OrientationFix.m"; sourceTree = "<group>"; };
-		B0B5999519969E7400D8A89A /* SGIngredientesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGIngredientesTableViewController.h; sourceTree = "<group>"; };
-		B0B5999619969E7400D8A89A /* SGIngredientesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGIngredientesTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -244,8 +244,8 @@
 			children = (
 				B0B59988199674EA00D8A89A /* SGAddIngredienteViewController.h */,
 				B0B59989199674EA00D8A89A /* SGAddIngredienteViewController.m */,
-				B0B5999519969E7400D8A89A /* SGIngredientesTableViewController.h */,
-				B0B5999619969E7400D8A89A /* SGIngredientesTableViewController.m */,
+				B05EFABD1997A1EC001006DA /* SGAddProcedimentoViewController.h */,
+				B05EFABE1997A1EC001006DA /* SGAddProcedimentoViewController.m */,
 			);
 			name = Ingredientes;
 			sourceTree = "<group>";
@@ -351,7 +351,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B0B5999719969E7400D8A89A /* SGIngredientesTableViewController.m in Sources */,
 				B0B5998A199674EA00D8A89A /* SGAddIngredienteViewController.m in Sources */,
 				B040BA4719846E1900B1DEA5 /* SGCollectionViewController.m in Sources */,
 				B040BA2019846A6E00B1DEA5 /* SGAppDelegate.m in Sources */,
@@ -360,6 +359,7 @@
 				B040BA4A1984796700B1DEA5 /* SGReceita.m in Sources */,
 				B040BA4D198488FA00B1DEA5 /* SGCollectionViewCell.m in Sources */,
 				B040BA1C19846A6E00B1DEA5 /* main.m in Sources */,
+				B05EFABF1997A1EC001006DA /* SGAddProcedimentoViewController.m in Sources */,
 				B023F3E51994843600FCEB17 /* SGEditViewController.m in Sources */,
 				B0B599911996781800D8A89A /* UIViewController+UIViewController_OrientationFix.m in Sources */,
 				B040BA5019848EB100B1DEA5 /* SGDetailsViewController.m in Sources */,

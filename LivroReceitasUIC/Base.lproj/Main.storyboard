@@ -344,11 +344,84 @@
                     <connections>
                         <outlet property="nomeField" destination="YBj-ja-TZD" id="1SX-5m-END"/>
                         <outlet property="quantidadeField" destination="VZn-Ky-gZH" id="N02-Tr-q1K"/>
+                        <outlet property="tituloField" destination="9lP-jH-cCX" id="OFp-2h-9ra"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z20-iD-BqS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="484" y="21"/>
+        </scene>
+        <!--Adicionar Procedimento View Controller-->
+        <scene sceneID="8Di-q9-1Dj">
+            <objects>
+                <viewController storyboardIdentifier="adicionarProcedimento" id="cr3-dm-tDr" userLabel="Adicionar Procedimento View Controller" customClass="SGAddProcedimentoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8dy-1R-68d"/>
+                        <viewControllerLayoutGuide type="bottom" id="wLR-hu-sik"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ldC-gu-0M4">
+                        <rect key="frame" x="0.0" y="0.0" width="400" height="300"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vm1-4o-d06">
+                                <rect key="frame" x="90" y="250" width="80" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Cancelar">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelarButton:" destination="cr3-dm-tDr" eventType="touchUpInside" id="tDc-li-Ute"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Wa-RM-kfx">
+                                <rect key="frame" x="230" y="250" width="80" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Guardar">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="guardarButton:" destination="cr3-dm-tDr" eventType="touchUpInside" id="7Fw-kj-InQ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Adicionar Procedimento" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iwU-QI-P3h">
+                                <rect key="frame" x="20" y="20" width="360" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Procedimento" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GiT-gA-fDy">
+                                <rect key="frame" x="20" y="54" width="101" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O4q-c1-n1g">
+                                <rect key="frame" x="20" y="83" width="360" height="159"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.95403324739999995" green="0.94870345270000001" blue="0.95936304210000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="yes"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="400" height="300"/>
+                    <connections>
+                        <outlet property="procedimentoField" destination="O4q-c1-n1g" id="Xdw-Y5-EeT"/>
+                        <outlet property="tituloField" destination="iwU-QI-P3h" id="PYH-E9-AQj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B3a-A0-UTc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="479" y="373"/>
         </scene>
         <!--Add View Controller - Livro de Receitas-->
         <scene sceneID="GYi-N4-LWr">
@@ -453,7 +526,7 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="25"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="ingredientesTable" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Pcb-8H-LvA" userLabel="Table - Ingredientes">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Pcb-8H-LvA" userLabel="Table - Ingredientes">
                                 <rect key="frame" x="30" y="472" width="460" height="276"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -462,42 +535,34 @@
                                         <rect key="frame" x="0.0" y="22" width="460" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2O8-yk-rFN" id="4yp-Fu-3uF">
-                                            <rect key="frame" x="0.0" y="0.0" width="460" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="460" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ingrediente" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H3x-yQ-ehj">
-                                                    <rect key="frame" x="20" y="11" width="420" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="gwc-eu-TAg" id="jwv-pT-oY0"/>
+                                    <outlet property="delegate" destination="gwc-eu-TAg" id="W22-G0-ogL"/>
+                                </connections>
                             </tableView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="procedimentosTable" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="IWZ-Fw-U4Q" userLabel="Table - Procedimentos">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="IWZ-Fw-U4Q" userLabel="Table - Procedimentos">
                                 <rect key="frame" x="520" y="472" width="460" height="276"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" restorationIdentifier="procedimentosTableCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="procedimentosTableCell" id="6Ei-8j-IZD">
+                                    <tableViewCell contentMode="scaleToFill" restorationIdentifier="procedimentosTableCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="procedimentosTableCellADD" id="6Ei-8j-IZD">
                                         <rect key="frame" x="0.0" y="22" width="460" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6Ei-8j-IZD" id="zNd-xN-8jJ">
-                                            <rect key="frame" x="0.0" y="0.0" width="460" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="460" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="procedimento" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FPw-zk-rZB">
-                                                    <rect key="frame" x="20" y="11" width="420" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="gwc-eu-TAg" id="Q89-E0-Nwh"/>
+                                    <outlet property="delegate" destination="gwc-eu-TAg" id="paV-Qx-ALr"/>
+                                </connections>
                             </tableView>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ft3-nq-Ovi">
                                 <rect key="frame" x="539" y="349" width="51" height="31"/>
@@ -545,8 +610,10 @@
                         <outlet property="adicionarImagemButton" destination="5kR-4p-jw1" id="rZh-fP-Fb3"/>
                         <outlet property="categoriaField" destination="7bS-Lk-h7F" id="ZPc-4N-jzQ"/>
                         <outlet property="favoritoSwitch" destination="ft3-nq-Ovi" id="fsD-jl-I72"/>
+                        <outlet property="ingTable" destination="Pcb-8H-LvA" id="45V-xo-efD"/>
                         <outlet property="nomeField" destination="8gG-EN-rI4" id="cSF-dq-0Kj"/>
                         <outlet property="porcoesField" destination="EG2-9H-qae" id="ax7-2U-PFh"/>
+                        <outlet property="procTable" destination="IWZ-Fw-U4Q" id="G7J-zl-QsO"/>
                         <outlet property="tempoField" destination="nBo-ZT-W0n" id="wGu-jh-ThO"/>
                     </connections>
                 </viewController>

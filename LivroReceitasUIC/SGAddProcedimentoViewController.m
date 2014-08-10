@@ -1,22 +1,21 @@
 //
-//  SGAddIngredienteViewController.m
+//  SGAddProcedimentoViewController.m
 //  LivroReceitasUIC
 //
-//  Created by Shinigami on 09/08/14.
+//  Created by Shinigami on 10/08/14.
 //  Copyright (c) 2014 Shinigami. All rights reserved.
 //
 
-#import "SGAddIngredienteViewController.h"
+#import "SGAddProcedimentoViewController.h"
 #import "SGAddViewController.h"
 
-@interface SGAddIngredienteViewController ()
+@interface SGAddProcedimentoViewController ()
 
 @end
 
-@implementation SGAddIngredienteViewController
+@implementation SGAddProcedimentoViewController
 
-@synthesize nomeField;
-@synthesize quantidadeField;
+@synthesize procedimentoField;
 @synthesize indexPath;
 @synthesize tituloField;
 
@@ -43,7 +42,7 @@
     CGRect screen = self.view.superview.bounds;
     
     // para definir a frame a mostrar
-    CGRect frame = CGRectMake(0, 0, 400, 200);
+    CGRect frame = CGRectMake(0, 0, 400, 300);
     float x = (screen.size.width - frame.size.width)*.5f;
     float y = (screen.size.height - frame.size.height)*.5f;
     
@@ -52,10 +51,11 @@
     
     self.view.frame = frame;
     
+    // para mudar o titulo
     if(!indexPath){
-        tituloField.text = @"Adicionar Ingrediente";
+        tituloField.text = @"Adiconar Procedimento";
     }else{
-        tituloField.text = @"Editar Ingrediente";
+        tituloField.text = @"Editar Procedimento";
     }
 }
 
@@ -65,21 +65,20 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)guardarButton:(id)sender {
-    NSString *ingrediente = [[NSString alloc] init];
-    ingrediente = [ingrediente stringByAppendingString:quantidadeField.text];
-    ingrediente = [ingrediente stringByAppendingString:@" de "];
-    ingrediente = [ingrediente stringByAppendingString:nomeField.text];
 
-    if([[self delegate] respondsToSelector:@selector(adicionarIngrediente:naPosicao:)]){
-        [[self delegate] adicionarIngrediente:ingrediente naPosicao:indexPath];
-    }
-    
+- (IBAction)cancelarButton:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (IBAction)cancelarButton:(id)sender {
-    // para fazer o dismiss das pagesform e sheetform
+- (IBAction)guardarButton:(id)sender {
+    NSString *procedimento = [[NSString alloc] init];
+    procedimento = [procedimento stringByAppendingString:@"- "];
+    procedimento = [procedimento stringByAppendingString:procedimentoField.text];
+    
+    if([[self delegate] respondsToSelector:@selector(adicionarProcedimento:naPosicao:)]){
+        [[self delegate] adicionarProcedimento:procedimento naPosicao:indexPath];
+    }
+    
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 @end
