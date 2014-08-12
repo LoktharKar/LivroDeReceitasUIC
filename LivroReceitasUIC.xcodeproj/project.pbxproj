@@ -214,6 +214,15 @@
 			name = Classes;
 			sourceTree = "<group>";
 		};
+		B0724C2D199AA8C7004162E3 /* Procedimentos */ = {
+			isa = PBXGroup;
+			children = (
+				B05EFABD1997A1EC001006DA /* SGAddProcedimentoViewController.h */,
+				B05EFABE1997A1EC001006DA /* SGAddProcedimentoViewController.m */,
+			);
+			name = Procedimentos;
+			sourceTree = "<group>";
+		};
 		B0B5998B1996774300D8A89A /* Categorias */ = {
 			isa = PBXGroup;
 			children = (
@@ -235,6 +244,7 @@
 				B023F3E31994843600FCEB17 /* SGEditViewController.h */,
 				B023F3E41994843600FCEB17 /* SGEditViewController.m */,
 				B0B599991996A01000D8A89A /* Ingredientes */,
+				B0724C2D199AA8C7004162E3 /* Procedimentos */,
 			);
 			name = ADD/EDIT/DETAILS;
 			sourceTree = "<group>";
@@ -244,8 +254,6 @@
 			children = (
 				B0B59988199674EA00D8A89A /* SGAddIngredienteViewController.h */,
 				B0B59989199674EA00D8A89A /* SGAddIngredienteViewController.m */,
-				B05EFABD1997A1EC001006DA /* SGAddProcedimentoViewController.h */,
-				B05EFABE1997A1EC001006DA /* SGAddProcedimentoViewController.m */,
 			);
 			name = Ingredientes;
 			sourceTree = "<group>";

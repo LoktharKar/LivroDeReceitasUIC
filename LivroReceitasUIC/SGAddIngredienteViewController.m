@@ -68,7 +68,7 @@
 - (IBAction)guardarButton:(id)sender {
     NSString *ingrediente = [[NSString alloc] init];
     ingrediente = [ingrediente stringByAppendingString:quantidadeField.text];
-    ingrediente = [ingrediente stringByAppendingString:@" de "];
+    ingrediente = [ingrediente stringByAppendingString:@" - "];
     ingrediente = [ingrediente stringByAppendingString:nomeField.text];
 
     if([[self delegate] respondsToSelector:@selector(adicionarIngrediente:naPosicao:)]){

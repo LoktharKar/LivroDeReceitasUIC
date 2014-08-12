@@ -19,8 +19,15 @@
 @property (strong, nonatomic) IBOutlet UISwitch *favoritoSwitch;
 
 - (IBAction)guardarReceitaButton:(id)sender;
+
 - (IBAction)adicionarIngredienteButton:(id)sender;
 - (IBAction)adicionarProcedimentoButton:(id)sender;
+
+- (IBAction)apagarIngrediente:(id)sender;
+- (IBAction)apagarProcedimento:(id)sender;
+
+@property (strong, nonatomic) IBOutlet UIButton *apagarIngredienteButtonText;
+@property (strong, nonatomic) IBOutlet UIButton *apagarProcedimentoButtonText;
 
 @property (strong, nonatomic) IBOutlet UIImageView *AdicionarImagemImage;
 @property (strong, nonatomic) IBOutlet UIButton *adicionarImagemButton;

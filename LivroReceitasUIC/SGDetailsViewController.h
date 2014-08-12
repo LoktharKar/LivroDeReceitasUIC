@@ -10,7 +10,7 @@
 #import "SGReceita.h"
 #import "SGCollectionViewController.h"
 
-@interface SGDetailsViewController : UIViewController <UINavigationControllerDelegate>
+@interface SGDetailsViewController : UIViewController <UINavigationControllerDelegate, UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic) SGReceita *receita;
 
@@ -23,6 +23,9 @@
 
 @property (strong, nonatomic) IBOutlet UITableView *ingredientesTable;
 @property (strong, nonatomic) IBOutlet UITableView *procedimentosTable;
+
+@property (nonatomic) NSArray *ingredientes;
+@property (nonatomic) NSArray *procedimentos;
 
 - (IBAction)editReceita:(id)sender;
 - (IBAction)favoritoButton:(id)sender;

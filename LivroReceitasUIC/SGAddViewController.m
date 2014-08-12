@@ -29,11 +29,15 @@
 
 @synthesize adicionarImagemButton;
 @synthesize AdicionarImagemImage;
+
 @synthesize ingredientesINS;
 @synthesize procedimentosINS;
 
 @synthesize ingTable;
 @synthesize procTable;
+
+@synthesize apagarIngredienteButtonText;
+@synthesize apagarProcedimentoButtonText;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -47,6 +51,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    //load prototype table cell nib static
 }
 
 - (void)didReceiveMemoryWarning
@@ -114,6 +119,26 @@
     [self.navigationController presentViewController:adicionarProcedimento animated:YES completion:nil];
 }
 
+- (IBAction)apagarIngrediente:(id)sender {
+    if(![self.ingTable isEditing]){
+        [self.apagarIngredienteButtonText setTitle:@"Terminar" forState:UIControlStateNormal];
+        [self.ingTable setEditing:YES animated:YES];
+    }else{
+        [self.apagarIngredienteButtonText setTitle:@"Apagar" forState:UIControlStateNormal];
+        [self.ingTable setEditing:NO animated:YES];
+    }
+}
+
+- (IBAction)apagarProcedimento:(id)sender {
+    if(![self.procTable isEditing]){
+        [self.apagarProcedimentoButtonText setTitle:@"Terminar" forState:UIControlStateNormal];
+        [self.procTable setEditing:YES animated:YES];
+    }else{
+        [self.apagarProcedimentoButtonText setTitle:@"Apagar" forState:UIControlStateNormal];
+        [self.procTable setEditing:NO animated:YES];
+    }
+}
+
 // para adicionar imagem
 - (IBAction)addImage:(id)sender {
     
@@ -156,6 +181,10 @@
         [self.ingredientesINS replaceObjectAtIndex:indexPath.row withObject:ingrediente];
     }
     
+    if([self.ingredientesINS count] != 0){
+        [apagarIngredienteButtonText setHidden:NO];
+    }
+    
     [ingTable reloadData];
 }
 
@@ -169,6 +198,10 @@
         [self.procedimentosINS addObject:procedimento];
     }else{
         [self.procedimentosINS replaceObjectAtIndex:indexPath.row withObject:procedimento];
+    }
+    
+    if([self.procedimentosINS count] != 0){
+        [apagarProcedimentoButtonText setHidden:NO];
     }
     
     [procTable reloadData];
@@ -198,7 +231,6 @@
         if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault  reuseIdentifier:identifier];
         }
-        
     
         NSString *ingrediente = [ingredientesINS objectAtIndex:indexPath.row];
         cell.textLabel.text = ingrediente;
@@ -236,8 +268,8 @@
         [self.navigationController presentViewController:adicionarIngrediente animated:YES completion:nil];
         
         // preencher com os valores já definidos no array de ingredientes
-        adicionarIngrediente.nomeField.text = [[[ingredientesINS objectAtIndex:indexPath.row] componentsSeparatedByString:@" de "] objectAtIndex:1];
-        adicionarIngrediente.quantidadeField.text = [[[ingredientesINS objectAtIndex:indexPath.row] componentsSeparatedByString:@" de "] objectAtIndex:0];
+        adicionarIngrediente.nomeField.text = [[[ingredientesINS objectAtIndex:indexPath.row] componentsSeparatedByString:@" - "] objectAtIndex:1];
+        adicionarIngrediente.quantidadeField.text = [[[ingredientesINS objectAtIndex:indexPath.row] componentsSeparatedByString:@" - "] objectAtIndex:0];
         
     }else{
         SGAddProcedimentoViewController *adicionarProcedimento = [self.storyboard instantiateViewControllerWithIdentifier:@"adicionarProcedimento"];
@@ -254,6 +286,32 @@
         
         // preencher com os valores já definidos no array de proceddimentos
         adicionarProcedimento.procedimentoField.text = [[[procedimentosINS objectAtIndex:indexPath.row] componentsSeparatedByString:@"- "] objectAtIndex:1];
+    }
+}
+
+-(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    // para eliminar as celulas nas tabelas
+    if (tableView == self.ingTable){
+        if(editingStyle == UITableViewCellEditingStyleDelete){
+            [self.ingredientesINS removeObjectAtIndex:indexPath.row];
+            [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+            if([ingredientesINS count] == 0){
+                [tableView setEditing:NO];
+                [self.apagarIngredienteButtonText setTitle:@"Apagar" forState:UIControlStateNormal];
+                [self.apagarIngredienteButtonText setHidden:YES];
+            }
+        }
+    }else{
+        if(editingStyle == UITableViewCellEditingStyleDelete){
+            [self.procedimentosINS removeObjectAtIndex:indexPath.row];
+            [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+            if([procedimentosINS count] == 0){
+                [tableView setEditing:NO];
+                [self.apagarProcedimentoButtonText setTitle:@"Apagar" forState:UIControlStateNormal];
+                [self.apagarProcedimentoButtonText setHidden:YES];
+            }
+        }
     }
 }
 

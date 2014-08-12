@@ -21,6 +21,12 @@ static BOOL favoriteINS;
 
 @synthesize receita;
 
+@synthesize ingredientes;
+@synthesize procedimentos;
+
+@synthesize ingredientesTable;
+@synthesize procedimentosTable;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -40,6 +46,8 @@ static BOOL favoriteINS;
     self.porcoesField.text = [receita.porcoes stringValue];
     self.favoritoField.on = receita.favorito;
     self.imageField.image = receita.imagem;
+    self.ingredientes = receita.ingredientes;
+    self.procedimentos = receita.procedimentos;
     
     favoriteINS = receita.favorito;
     
@@ -105,6 +113,51 @@ static BOOL favoriteINS;
             
             [self.navigationController popToRootViewControllerAnimated:YES];
         }
+    }
+}
+
+// o numero de seccoes que a tabela tem
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+// o numero de linhas que a tabela tem
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    if (tableView == self.ingredientesTable) {
+        return [ingredientes count];
+    }else{
+        return [procedimentos count];
+    }
+}
+
+// para apresentar os valores inseridos nas tabelas (ingredientes e procedimentos)
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (tableView == ingredientesTable){
+        static NSString *identifier = @"ingredientesTableCellADD";
+        
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+        
+        if (cell == nil) {
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault  reuseIdentifier:identifier];
+        }
+        
+        NSString *ingrediente = [self.ingredientes objectAtIndex:indexPath.row];
+        cell.textLabel.text = ingrediente;
+        
+        return cell;
+    }else{
+        static NSString *identifier = @"procedimentosTableCellADD";
+        
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+        
+        if (cell == nil) {
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault  reuseIdentifier:identifier];
+        }
+        
+        NSString *procedimento = [self.procedimentos objectAtIndex:indexPath.row];
+        cell.textLabel.text = procedimento;
+        
+        return cell;
     }
 }
     
