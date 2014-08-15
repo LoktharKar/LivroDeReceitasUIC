@@ -39,6 +39,17 @@
     // Do any additional setup after loading the view.
     
     [self loadArrayFromUD];
+    // para o caso da biblioteca existente nao se encontrar em ordem alfabetica
+    [self sortArray:livroDeReceitas];
+}
+
+// metodo para ordenar por ordem alfabetica o livro de receitas
+-(NSMutableArray *) sortArray: (NSMutableArray *) array{
+    NSMutableArray *sortedArray = array;
+    [sortedArray sortUsingComparator:^NSComparisonResult(SGReceita *a, SGReceita *b) {
+        return [a.nome caseInsensitiveCompare:b.nome];
+    }];
+    return sortedArray;
 }
 
 - (void)didReceiveMemoryWarning
@@ -140,6 +151,7 @@
     // sincronização da livraria
     [[NSUserDefaults standardUserDefaults] synchronize];
     
+    [self sortArray:livroDeReceitas];
     [self.collectionView reloadData];
 }
 

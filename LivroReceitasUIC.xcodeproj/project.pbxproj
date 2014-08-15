@@ -48,7 +48,7 @@
 		B023F3E1199475D900FCEB17 /* SGProtocols.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGProtocols.m; sourceTree = "<group>"; };
 		B023F3E31994843600FCEB17 /* SGEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGEditViewController.h; sourceTree = "<group>"; };
 		B023F3E41994843600FCEB17 /* SGEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGEditViewController.m; sourceTree = "<group>"; };
-		B040BA0C19846A6E00B1DEA5 /* LivroReceitasUIC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LivroReceitasUIC.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B040BA0C19846A6E00B1DEA5 /* Livro de Receitas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Livro de Receitas.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B040BA0F19846A6E00B1DEA5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B040BA1119846A6E00B1DEA5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		B040BA1319846A6E00B1DEA5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -122,7 +122,7 @@
 		B040BA0D19846A6E00B1DEA5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B040BA0C19846A6E00B1DEA5 /* LivroReceitasUIC.app */,
+				B040BA0C19846A6E00B1DEA5 /* Livro de Receitas.app */,
 				B040BA2D19846A6E00B1DEA5 /* LivroReceitasUICTests.xctest */,
 			);
 			name = Products;
@@ -275,7 +275,7 @@
 			);
 			name = LivroReceitasUIC;
 			productName = LivroReceitasUIC;
-			productReference = B040BA0C19846A6E00B1DEA5 /* LivroReceitasUIC.app */;
+			productReference = B040BA0C19846A6E00B1DEA5 /* Livro de Receitas.app */;
 			productType = "com.apple.product-type.application";
 		};
 		B040BA2C19846A6E00B1DEA5 /* LivroReceitasUICTests */ = {
@@ -502,7 +502,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LivroReceitasUIC/LivroReceitasUIC-Prefix.pch";
 				INFOPLIST_FILE = "LivroReceitasUIC/LivroReceitasUIC-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Livro de Receitas";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -516,7 +516,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LivroReceitasUIC/LivroReceitasUIC-Prefix.pch";
 				INFOPLIST_FILE = "LivroReceitasUIC/LivroReceitasUIC-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Livro de Receitas";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

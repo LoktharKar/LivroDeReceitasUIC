@@ -235,6 +235,13 @@
         NSString *ingrediente = [ingredientesINS objectAtIndex:indexPath.row];
         cell.textLabel.text = ingrediente;
         
+        // para alterar a altura das linhas
+        cell.textLabel.numberOfLines = 0;
+        
+        CGSize labelSize = [self getSizeForText:cell.textLabel.text maxWidth:460 font:@"Helvetica Neue" fontSize:15];
+        
+        [cell.textLabel setFrame:CGRectMake(cell.textLabel.frame.origin.x, cell.textLabel.frame.origin.y, labelSize.height, labelSize.width)];
+        
         return cell;
     }else{
         static NSString *identifier = @"procedimentosTableCellADD";
@@ -247,7 +254,13 @@
         
         NSString *procedimento = [procedimentosINS objectAtIndex:indexPath.row];
         cell.textLabel.text = procedimento;
+        cell.textLabel.numberOfLines = 0;
         
+        // para alterar a altura das linhas
+        CGSize labelSize = [self getSizeForText:cell.textLabel.text maxWidth:460 font:@"Helvetica Neue" fontSize:15];
+        
+        [cell.textLabel setFrame:CGRectMake(cell.textLabel.frame.origin.x, cell.textLabel.frame.origin.y, labelSize.height, labelSize.width)];
+
         return cell;
     }
 }
@@ -284,7 +297,7 @@
         //mostrar a nova janela
         [self.navigationController presentViewController:adicionarProcedimento animated:YES completion:nil];
         
-        // preencher com os valores já definidos no array de proceddimentos
+        // preencher com os valores já definidos no array de procedimentos
         adicionarProcedimento.procedimentoField.text = [[[procedimentosINS objectAtIndex:indexPath.row] componentsSeparatedByString:@"- "] objectAtIndex:1];
     }
 }
@@ -313,6 +326,24 @@
             }
         }
     }
+}
+
+// para alterr a altura das linhas
+- (CGSize)getSizeForText:(NSString *)text maxWidth:(CGFloat)width font:(NSString *)fontName fontSize:(float)fontSize {
+    CGSize constraintSize;
+    constraintSize.height = MAXFLOAT;
+    constraintSize.width = width;
+    NSDictionary *attributesDictionary = [NSDictionary dictionaryWithObjectsAndKeys:
+                                          [UIFont fontWithName:fontName size:fontSize], NSFontAttributeName,
+                                          nil];
+    
+    CGRect frame = [text boundingRectWithSize:constraintSize
+                                      options:NSStringDrawingUsesLineFragmentOrigin
+                                   attributes:attributesDictionary
+                                      context:nil];
+    
+    CGSize stringSize = frame.size;
+    return stringSize;
 }
 
 @end
